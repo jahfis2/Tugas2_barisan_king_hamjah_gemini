@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Merdeka Berprestasi</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter (Modern look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom config for better typography and colors */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Light background for body */
+        }
+        /* Style for the Hero background, replacing image 37 */
+        .hero-bg {
+            /* MENGGUNAKAN JALUR FILE LOKAL YANG ANDA BERIKAN */
+            background-image: url('webcam-toy-photo37.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed; /* For a parallax-like effect */
+        }
+        /* Custom scroll behavior for smooth navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation (Sticky and Responsive) -->
+    <header id="header" class="sticky top-0 z-50 bg-blue-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & School Name -->
+                <a href="#beranda" class="flex items-center space-x-3 text-white">
+                    <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    <span class="text-xl font-extrabold tracking-tight">SMA Merdeka Berprestasi</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-white hover:text-amber-300 transition duration-300 font-medium">Beranda</a>
+                    <a href="#tentang" class="text-white hover:text-amber-300 transition duration-300 font-medium">Tentang Kami</a>
+                    <a href="#program" class="text-white hover:text-amber-300 transition duration-300 font-medium">Program</a>
+                    <a href="#galeri" class="text-white hover:text-amber-300 transition duration-300 font-medium">Galeri</a>
+                    <a href="#kontak" class="text-amber-500 bg-white px-3 py-1 rounded-full hover:bg-gray-100 transition duration-300 font-semibold">Hubungi</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 pb-3">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#beranda" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Beranda</a>
+                <a href="#tentang" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Tentang Kami</a>
+                <a href="#program" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Program</a>
+                <a href="#galeri" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
+                <a href="#kontak" class="text-amber-500 bg-white block px-3 py-2 rounded-md text-base font-medium mt-2">Hubungi</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- 1. Hero Section -->
+    <section id="beranda" class="hero-bg h-screen flex items-center justify-center text-center">
+        <div class="bg-black bg-opacity-50 p-8 md:p-16 rounded-xl max-w-4xl mx-4 shadow-2xl">
+            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-4">
+                Wujudkan Masa Depan Gemilang di <span class="text-amber-400">SMA Merdeka Berprestasi</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-200 mb-8">
+                Pusat inovasi pendidikan, melahirkan pemimpin masa depan yang berintegritas dan adaptif terhadap tantangan global.
+            </p>
+            <a href="#program" class="inline-block bg-amber-500 text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-amber-400 transition duration-300 transform hover:scale-105">
+                Lihat Program Unggulan
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Tentang Kami Section -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-10 border-b-4 border-amber-500 inline-block pb-1">Tentang Kami</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                SMA Merdeka Berprestasi bertekad mencetak siswa yang tidak hanya unggul secara akademis, tetapi juga memiliki kecerdasan emosional dan keterampilan abad ke-21.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Visi -->
+                <div class="card p-6 bg-blue-50 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:translate-y-[-5px]">
+                    <h3 class="text-2xl font-semibold text-blue-900 mb-3 flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                        Visi
+                    </h3>
+                    <p class="text-gray-700">Menjadi pusat pendidikan terdepan di Asia Tenggara, menghasilkan lulusan berkarakter Pancasila dan berdaya saing global.</p>
+                </div>
+                <!-- Card 2: Misi -->
+                <div class="card p-6 bg-blue-50 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:translate-y-[-5px]">
+                    <h3 class="text-2xl font-semibold text-blue-900 mb-3 flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM6 11a1 1 0 000 2h8a1 1 0 100-2H6zM5 15a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"></path></svg>
+                        Misi
+                    </h3>
+                    <ul class="list-disc list-inside text-left text-gray-700 space-y-2 mx-auto inline-block">
+                        <li>Menerapkan kurikulum merdeka yang adaptif.</li>
+                        <li>Menciptakan lingkungan belajar yang kolaboratif.</li>
+                        <li>Mengembangkan bakat melalui program ektrakurikuler unggulan.</li>
+                    </ul>
+                </div>
+                 <!-- Card 3: Nilai Inti -->
+                <div class="card p-6 bg-blue-50 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:translate-y-[-5px]">
+                    <h3 class="text-2xl font-semibold text-blue-900 mb-3 flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path></svg>
+                        Nilai Inti
+                    </h3>
+                    <p class="text-gray-700 font-bold">Integritas, Inovasi, Kolaborasi, dan Kepemimpinan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Program Unggulan Section -->
+    <section id="program" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-10 border-b-4 border-amber-500 inline-block pb-1">Fokus Program</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Program 1: Sains dan Teknologi -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Placeholder untuk Program Akademik -->
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Laboratorium+Sains" alt="Program Sains" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Sains & Teknologi</h3>
+                        <p class="text-gray-600">Kurikulum berbasis proyek, fokus pada robotika, kecerdasan buatan, dan penelitian ilmiah berkelanjutan.</p>
+                    </div>
+                </div>
+                <!-- Program 2: Kepemimpinan dan Kewirausahaan -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Placeholder untuk Ekstrakurikuler -->
+                    <img src="https://placehold.co/600x400/fbbf24/000000?text=Wirausaha+Siswa" alt="Program Kewirausahaan" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Kepemimpinan & Wirausaha</h3>
+                        <p class="text-gray-600">Pelatihan soft skills, simulasi bisnis, dan pengembangan jiwa kepemimpinan melalui OSIS dan kegiatan sosial.</p>
+                    </div>
+                </div>
+                <!-- Program 3: Bahasa dan Budaya Internasional -->
+                <div class="card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Placeholder untuk Beasiswa -->
+                    <img src="https://placehold.co/600x400/10b981/ffffff?text=Beasiswa" alt="Program Beasiswa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Bahasa & Budaya</h3>
+                        <p class="text-gray-600">Kelas intensif Bahasa Inggris, Mandarin, dan Jepang, serta pertukaran budaya dengan sekolah mitra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Galeri Siswa Section (Alumni Berprestasi) -->
+    <section id="galeri" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-blue-700 mb-3 border-b-4 border-amber-500 inline-block pb-1">Galeri Prestasi</h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
+                Kenali para siswa dan alumni yang telah meraih berbagai pencapaian di tingkat nasional dan internasional.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Siswa 1: Zahran -->
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo30.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Zahran';" alt="Zahran" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Zahran P.</h3>
+                    <p class="text-sm text-gray-500">Juara Olimpiade Fisika Nasional</p>
+                </div>
+                <!-- Siswa 2: Hamzah -->
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo31.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Hamzah';" alt="Hamzah" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Hamzah A.</h3>
+                    <p class="text-sm text-gray-500">Delegasi Model UN Asia</p>
+                </div>
+                <!-- Siswa 3: Rafi -->
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo32.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Rafi';" alt="Rafi" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Rafi D.</h3>
+                    <p class="text-sm text-gray-500">Penemu Inovasi Aplikasi Kesehatan</p>
+                </div>
+                <!-- Siswa 4: Denis Kalcer -->
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo33.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Denis';" alt="Denis Kalcer" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Denis Kalcer</h3>
+                    <p class="text-sm text-gray-500">Peringkat 1 Debat Bahasa Inggris</p>
+                </div>
+                <!-- Siswa 5: Cep Faisal (Menambahkan Rangga dan Chiko yang tidak ada di grid 5 kolom) -->
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo34.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Faisal';" alt="Cep Faisal" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Cep Faisal</h3>
+                    <p class="text-sm text-gray-500">Atlet Nasional Panahan Junior</p>
+                </div>
+            </div>
+            
+            <!-- Tambahan Rangga dan Chiko -->
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6">
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo35.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Rangga';" alt="Rangga Puji" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Rangga Puji</h3>
+                    <p class="text-sm text-gray-500">Desainer Grafis Terbaik</p>
+                </div>
+                <div class="card bg-gray-50 rounded-xl shadow-md p-3 hover:bg-amber-50 transition duration-300">
+                    <img src="webcam-toy-photo36.jpg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c4c4c/ffffff?text=Chiko';" alt="Chiko" class="w-full h-40 object-cover rounded-lg mb-3 shadow-inner">
+                    <h3 class="text-lg font-semibold text-blue-900">Chiko L.</h3>
+                    <p class="text-sm text-gray-500">Juara Coding Regional</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. Kontak Section -->
+    <section id="kontak" class="py-16 bg-blue-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">Hubungi Kami</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Tertarik bergabung? Kirimkan pesan Anda atau kunjungi kami.
+            </p>
+
+            <div class="bg-white p-8 rounded-xl shadow-2xl">
+                <div class="mb-6 space-y-2 text-blue-900">
+                    <p class="flex items-center justify-center font-medium">
+                        <svg class="w-5 h-5 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        Jl. Pelopor Pendidikan No. 21, Bandung, 40292
+                    </p>
+                    <p class="flex items-center justify-center font-medium">
+                        <svg class="w-5 h-5 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        Email: info@smamerdeka.sch.id | Telp: (022) 87654321
+                    </p>
+                </div>
+
+                <!-- Contact Form -->
+                <form onsubmit="event.preventDefault(); document.getElementById('success-message').classList.remove('hidden'); this.reset();" class="space-y-4">
+                    <input type="text" placeholder="Nama Lengkap Anda" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    <input type="email" placeholder="Email Aktif Anda" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    <textarea placeholder="Pesan Anda..." required rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    <button type="submit" class="w-full bg-amber-500 text-blue-900 font-bold py-3 rounded-lg shadow-md hover:bg-amber-400 transition duration-300 transform hover:scale-[1.01]">
+                        Kirim Pesan
+                    </button>
+                    <!-- Success Message (Non-alert) -->
+                    <div id="success-message" class="hidden mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg" role="alert">
+                        Terima kasih! Pesan Anda telah kami terima dan akan segera kami balas.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 SMA Merdeka Berprestasi. Semua Hak Dilindungi. Dibangun dengan Integritas dan Inovasi.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
