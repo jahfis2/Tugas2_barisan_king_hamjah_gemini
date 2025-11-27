@@ -1,0 +1,2 @@
+# Tugas2_barisan_king_hamjah_gemini
+tugas
